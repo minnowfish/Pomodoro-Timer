@@ -4,12 +4,12 @@ html{
     letter-spacing: 0.8px;
     min-height: 100vh;
     color: #d8e1e4;
-    background-image:  linear-gradient(-20deg, #036874 0%, #924a44 100%);
+    background-image:  linear-gradient(-25deg, #2e7fa2 0%, #792a23 100%);
     background-size: cover;
 }
 
 h1 {
-    margin: 0 auto 10px auto;
+    margin: 100px auto 10px auto;
     color: #d8e1e4;
 }
 
@@ -83,14 +83,14 @@ p{
     font-family: 'Droid Sans Mono', monospace;
     font-size: 250%;
     position: relative;
-    top: 50px;
+    top: 68px;
     color: #d8e1e4;
   }
 
-  button{
+  .btn-start{
     position: relative;
-    top: 50px;
-    font-size: 80%;
+    top: 25px;
+    font-size: 100%;
     text-transform: uppercase;
     letter-spacing: 1px;
     border: none;
@@ -100,4 +100,8 @@ p{
 
   button:hover{
     color: #aaadbc;
+  }
+
+  .reset{
+    display:none;
   }
