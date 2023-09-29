@@ -29,6 +29,8 @@ const updateSeconds = () => {
 
 const appTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent)
+    const showReset = document.querySelector('.reset');
+    showReset.style.display = 'inline'
 
     if(state == 'stopped') {
       state = 'running';

@@ -104,4 +104,11 @@ p{
 
   .reset{
     display:none;
+    position: relative;
+    top: 25px;
+    font-size: 100%;
+    letter-spacing: 1px;
+    border: none;
+    background: none;
+    color:#d8e1e4
   }
