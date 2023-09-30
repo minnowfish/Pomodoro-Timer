@@ -27,10 +27,24 @@ const updateSeconds = () => {
   }
 }
 
+const resetTimer = () => { 
+  const minuteDiv = document.querySelector('.minutes');
+  const secondDiv = document.querySelector('.seconds');
+  const showReset = document.querySelector('.reset');  
+
+  clearInterval(myInterval); 
+  
+  minuteDiv.textContent = "25";
+  secondDiv.textContent = "00"
+  state = 'stopped';
+  startBtn.textContent = 'Start';
+  showReset.style.display = 'none';
+}
+
 const appTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent)
     const showReset = document.querySelector('.reset');
-    showReset.style.display = 'inline'
+    showReset.style.display = 'inline';
 
     if(state == 'stopped') {
       state = 'running';
@@ -49,6 +63,8 @@ const appTimer = () => {
       startBtn.textContent = 'Pause';
       myInterval = setInterval(updateSeconds, 1000);
     }
+
+    showReset.addEventListener('click', resetTimer)
   }
 
 startBtn.addEventListener('click', appTimer);
