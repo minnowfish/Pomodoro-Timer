@@ -3,23 +3,56 @@ html{
     font-size: 20px;
     letter-spacing: 0.8px;
     min-height: 100vh;
-    color: #d8e1e4;
+    color: #f4fcff;
     background-image:  linear-gradient(-25deg, #2e7fa2 0%, #c24d42 100%);
     background-size: cover;
 }
 
 h1 {
-    margin: 100px auto 10px auto;
-    color: #d8e1e4;
+    margin: 90px auto 10px auto;
+    color: #edf7fa;
 }
 
 p{
     margin: 0;
 }
 
-.app-message{
-    height: 20px;
-    margin: 10px auto 20px auto;
+#study{
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  font-size: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border:2px solid #edf7fa;
+  border-radius: 15px;
+  background: none;
+  color:#edf7fa
+}
+
+#break{
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  font-size: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border:2px solid #edf7fa;
+  border-radius: 15px;
+  background: none;
+  color:#edf7fa
+}
+
+#study:hover{
+  transition: 0.5s;
+  color: rgb(31, 31, 31);
+  background-color: #edf7fa;
+}
+
+#break:hover{
+  transition: 0.5s;
+  color: rgb(31, 31, 31);
+  background-color: #edf7fa;
 }
 
 .app-container{
@@ -72,7 +105,7 @@ p{
   }
 
   .circle {
-    border-color: #bf5239;
+    border-color: #df6448;
   }
 
   .circle-mask{
@@ -84,7 +117,7 @@ p{
     font-size: 250%;
     position: relative;
     top: 68px;
-    color: #d8e1e4;
+    color: #edf7fa;
   }
 
   .btn-start{
@@ -95,7 +128,7 @@ p{
     letter-spacing: 1px;
     border: none;
     background: none;
-    color:#d8e1e4
+    color:#edf7fa
   }
 
   button:hover{
@@ -110,5 +143,5 @@ p{
     letter-spacing: 1px;
     border: none;
     background: none;
-    color:#d8e1e4
+    color:#edf7fa
   }
