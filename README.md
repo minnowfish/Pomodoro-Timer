@@ -1,7 +1,9 @@
 # Pomodoro-Timer
 
 # Description
-A pomoodoro timer project made following [Codedex's Pomodoro Timer Tutorial](https://www.codedex.io/projects/build-a-pomodoro-app-with-html-css-js).
+A pomoodoro timer project started by following [Codedex's Pomodoro Timer Tutorial](https://www.codedex.io/projects/build-a-pomodoro-app-with-html-css-js).
+
+I am now adding my own personal customnisation and features to this project.
 
 # What's Next
 I will be adding my own customnisation from the tutorial. 

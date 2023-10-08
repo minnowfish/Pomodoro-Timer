@@ -4,6 +4,7 @@ const session = document.querySelector('.minutes')
 let myInterval;
 let totalSeconds;
 let state = 'stopped';
+let study = 'True';
 
 const updateSeconds = () => {
   const minuteDiv = document.querySelector('.minutes');
@@ -66,5 +67,11 @@ const appTimer = () => {
 
     showReset.addEventListener('click', resetTimer)
   }
+
+if (study == 'True') {
+  const studyButton = document.getElementById("study");
+  studyButton.style.backgroundColor = "#edf7fa";
+  studyButton.style.color = "rgb(31, 31, 31)"
+}
 
 startBtn.addEventListener('click', appTimer);
