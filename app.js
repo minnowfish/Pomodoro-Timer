@@ -1,11 +1,32 @@
 const bells = new Audio('bell.mp3');
 const startBtn = document.querySelector('.btn-start')
 const session = document.querySelector('.minutes')
+const studyButton = document.querySelector('#study')
+const breakButton = document.querySelector('#break')
 let myInterval;
 let totalSeconds;
 let state = 'stopped';
 let study = 'True';
 
+const changeToBreakPage = () =>{
+ if (study == 'True'){
+    study = 'False'
+    breakButton.style.backgroundColor = "#edf7fa";
+    breakButton.style.color = "rgb(31, 31, 31)"
+    studyButton.style.background = "none"
+    studyButton.style.color = "#edf7fa"
+  }
+}
+
+const changeToStudyPage = () => {
+  if (study == 'False'){
+    study = 'True'
+    studyButton.style.backgroundColor = "#edf7fa";
+    studyButton.style.color = "rgb(31, 31, 31)"
+    breakButton.style.background = "none"
+    breakButton.style.color = "#edf7fa"
+  }
+}
 const updateSeconds = () => {
   const minuteDiv = document.querySelector('.minutes');
   const secondDiv = document.querySelector('.seconds');
@@ -69,9 +90,11 @@ const appTimer = () => {
   }
 
 if (study == 'True') {
-  const studyButton = document.getElementById("study");
   studyButton.style.backgroundColor = "#edf7fa";
   studyButton.style.color = "rgb(31, 31, 31)"
 }
 
+
 startBtn.addEventListener('click', appTimer);
+breakButton.addEventListener('click', changeToBreakPage)
+studyButton.addEventListener('click', changeToStudyPage)

@@ -45,14 +45,14 @@ p{
 
 #study:hover{
   transition: 0.5s;
-  color: rgb(31, 31, 31);
-  background-color: #edf7fa;
+  color: rgb(31, 31, 31) !important;
+  background-color: #edf7fa !important;
 }
 
 #break:hover{
   transition: 0.5s;
-  color: rgb(31, 31, 31);
-  background-color: #edf7fa;
+  color: rgb(31, 31, 31) !important;
+  background-color: #edf7fa !important;
 }
 
 .app-container{
