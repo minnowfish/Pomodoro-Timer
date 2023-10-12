@@ -15,6 +15,7 @@ const changeToBreakPage = () =>{
     breakButton.style.color = "rgb(31, 31, 31)"
     studyButton.style.background = "none"
     studyButton.style.color = "#edf7fa"
+    session.textContent = '05'
   }
 }
 
@@ -25,6 +26,7 @@ const changeToStudyPage = () => {
     studyButton.style.color = "rgb(31, 31, 31)"
     breakButton.style.background = "none"
     breakButton.style.color = "#edf7fa"
+    session.textContent = '25'
   }
 }
 const updateSeconds = () => {
@@ -41,7 +43,13 @@ const updateSeconds = () => {
   } else {
     secondDiv.textContent = secondsLeft;
   }
-  minuteDiv.textContent = `${minutesLeft}`
+
+  if (minutesLeft<10) {
+    minuteDiv.textContent = '0' + `${minutesLeft}`;
+  } else {
+    minuteDiv.textContent = `${minutesLeft}`
+  }
+
 
   if(minutesLeft === 0 && secondsLeft === 0){
     bells.play()
