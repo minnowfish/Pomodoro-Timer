@@ -3,6 +3,8 @@ const startBtn = document.querySelector('.btn-start')
 const session = document.querySelector('.minutes')
 const studyButton = document.querySelector('#study')
 const breakButton = document.querySelector('#break')
+const secondDiv = document.querySelector('.seconds');
+const resetButton = document.querySelector('.reset');
 let myInterval;
 let totalSeconds;
 let state = 'stopped';
@@ -11,27 +13,31 @@ let study = 'True';
 const changeToBreakPage = () =>{
  if (study == 'True'){
     study = 'False'
+    clearInterval(myInterval)
     breakButton.style.backgroundColor = "#edf7fa";
     breakButton.style.color = "rgb(31, 31, 31)"
     studyButton.style.background = "none"
     studyButton.style.color = "#edf7fa"
     session.textContent = '05'
+    secondDiv.textContent = '00'
   }
 }
 
 const changeToStudyPage = () => {
   if (study == 'False'){
     study = 'True'
+    clearInterval(myInterval)
     studyButton.style.backgroundColor = "#edf7fa";
     studyButton.style.color = "rgb(31, 31, 31)"
     breakButton.style.background = "none"
     breakButton.style.color = "#edf7fa"
     session.textContent = '25'
+    secondDiv.textContent = '00'
   }
 }
 const updateSeconds = () => {
   const minuteDiv = document.querySelector('.minutes');
-  const secondDiv = document.querySelector('.seconds');
+
 
   totalSeconds--;
 
@@ -60,7 +66,6 @@ const updateSeconds = () => {
 const resetTimer = () => { 
   const minuteDiv = document.querySelector('.minutes');
   const secondDiv = document.querySelector('.seconds');
-  const showReset = document.querySelector('.reset');  
 
   clearInterval(myInterval); 
   
@@ -68,13 +73,12 @@ const resetTimer = () => {
   secondDiv.textContent = "00"
   state = 'stopped';
   startBtn.textContent = 'Start';
-  showReset.style.display = 'none';
+  resetButton.style.display = 'none';
 }
 
 const appTimer = () => {
     const sessionAmount = Number.parseInt(session.textContent)
-    const showReset = document.querySelector('.reset');
-    showReset.style.display = 'inline';
+    resetButton.style.display = 'inline';
 
     if(state == 'stopped') {
       state = 'running';
@@ -94,7 +98,7 @@ const appTimer = () => {
       myInterval = setInterval(updateSeconds, 1000);
     }
 
-    showReset.addEventListener('click', resetTimer)
+    resetButton.addEventListener('click', resetTimer)
   }
 
 if (study == 'True') {
@@ -106,3 +110,7 @@ if (study == 'True') {
 startBtn.addEventListener('click', appTimer);
 breakButton.addEventListener('click', changeToBreakPage)
 studyButton.addEventListener('click', changeToStudyPage)
+
+// Errors to fix:
+//   - Reset button automatically resetting to 25:00 (somehow have a set time variable maybe?)
+//   - Button not resetting to START when time is changed
