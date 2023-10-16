@@ -5,6 +5,7 @@ const studyButton = document.querySelector('#study')
 const breakButton = document.querySelector('#break')
 const secondDiv = document.querySelector('.seconds');
 const resetButton = document.querySelector('.reset');
+let setTime = '25'
 let myInterval;
 let totalSeconds;
 let state = 'stopped';
@@ -20,6 +21,11 @@ const changeToBreakPage = () =>{
     studyButton.style.color = "#edf7fa"
     session.textContent = '05'
     secondDiv.textContent = '00'
+    setTime = '05'
+
+    state = 'stopped'
+    startBtn.textContent = 'START'
+    resetButton.style.display = 'none';
   }
 }
 
@@ -33,6 +39,11 @@ const changeToStudyPage = () => {
     breakButton.style.color = "#edf7fa"
     session.textContent = '25'
     secondDiv.textContent = '00'
+    setTime = '25'
+
+    state = 'stopped'
+    startBtn.textContent = 'START'
+    resetButton.style.display = 'none';
   }
 }
 const updateSeconds = () => {
@@ -69,7 +80,7 @@ const resetTimer = () => {
 
   clearInterval(myInterval); 
   
-  minuteDiv.textContent = "25";
+  minuteDiv.textContent = setTime;
   secondDiv.textContent = "00"
   state = 'stopped';
   startBtn.textContent = 'Start';
@@ -111,6 +122,3 @@ startBtn.addEventListener('click', appTimer);
 breakButton.addEventListener('click', changeToBreakPage)
 studyButton.addEventListener('click', changeToStudyPage)
 
-// Errors to fix:
-//   - Reset button automatically resetting to 25:00 (somehow have a set time variable maybe?)
-//   - Button not resetting to START when time is changed
