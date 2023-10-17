@@ -8,8 +8,15 @@ html{
     background-size: cover;
 }
 
+body{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 h1 {
-    margin: 90px auto 10px auto;
+    margin: 10px auto 10px auto;
     color: #edf7fa;
 }
 
@@ -91,7 +98,6 @@ p{
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     border-right: none;
-    z-index: 1;
 }
 
 .right-side {
