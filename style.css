@@ -74,6 +74,9 @@ p{
 .app-circle{
     position: relative;
     margin: 0 auto;
+    border: solid 6px;
+    border-color: #df6448;
+    border-radius: 50%;
     width: 200px;
     height: 200px;
 }
@@ -81,42 +84,6 @@ p{
 .circle-shape{
     pointer-events: none
 }
-
-.semi-circle{
-    position: absolute;
-    width: 100px;
-    height: 200px;
-    box-sizing: border-box;
-    border: solid 6px;
-}
-
-.left-side{
-    top: 0;
-    left: 0;
-    transform-origin: right center;
-    transform: rotate(0deg);
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-right: none;
-}
-
-.right-side {
-    top: 0;
-    left: 100px;
-    transform-origin: left center;
-    transform: rotate(0 deg);
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-    border-left: none;
-  }
-
-  .circle {
-    border-color: #df6448;
-  }
-
-  .circle-mask{
-    border-color: #e85a71;
-  }
 
   .app-counter-box{
     font-family: 'Droid Sans Mono', monospace;
