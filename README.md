@@ -1,4 +1,5 @@
 # Pomodoro-Timer
+Try it out [here](https://github.com/minnowfish/Pomodoro-Timer/deployments/github-pages)
 
 # Description
 A pomoodoro timer project started by following [Codedex's Pomodoro Timer Tutorial](https://www.codedex.io/projects/build-a-pomodoro-app-with-html-css-js).
