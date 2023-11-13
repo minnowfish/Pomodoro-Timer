@@ -1,5 +1,5 @@
 # Pomodoro-Timer
-Try it out [here](https://github.com/minnowfish/Pomodoro-Timer/deployments/github-pages)
+Try it out [here](https://minnowfish.github.io/Pomodoro-Timer/)
 
 ## Description
 A simple pomoodoro timer project with new features to be added over time.
