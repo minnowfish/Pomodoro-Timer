@@ -117,6 +117,11 @@ if (study == 'True') {
   studyButton.style.color = "rgb(31, 31, 31)"
 }
 
+typeof Notification !== "undefined"
+Notification.permission
+Notification.requestPermission().then(function (permission) {
+  console.log(permission);
+});
 
 startBtn.addEventListener('click', appTimer);
 breakButton.addEventListener('click', changeToBreakPage)
