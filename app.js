@@ -116,7 +116,7 @@ if (study == 'True') {
   studyButton.style.backgroundColor = "#edf7fa";
   studyButton.style.color = "rgb(31, 31, 31)"
 }
-
+// Possible to add notification popup in the future (e.g. explain what notif is for)
 typeof Notification !== "undefined"
 Notification.permission
 Notification.requestPermission().then(function (permission) {
